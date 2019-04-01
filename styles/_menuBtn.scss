@@ -1,0 +1,194 @@
+
+  $glowcolor: rgb(255, 0, 0);
+  $changed-txt:rgba(222, 108, 108, 0.68);
+  $border-glow: rgba(255, 0, 0, 0.841);
+  $border-glow2: red;
+
+  $b4-border-glow: rgba(222, 108, 108, 0.68);
+  $b4-border-glow2: rgba(222, 108, 108, 0.68);
+  
+/*
+
+  .neonText {
+    margin: 15px 0 0 15px;
+    position: absolute;
+    z-index: 9999;
+    border-radius: 10px;
+    border-width: thin;
+    //filter: blur(.75px);
+    box-shadow: 
+        0px 0px 0px 2px rgba(255,255,255,.7);
+    animation: neon 0.7s ease-in-out infinite alternate;
+  }
+  
+  .neonText h1{
+    margin: 5px 10px 5px 10px;
+    filter: blur(0px);
+    color: rgb(255, 255, 255);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+    font-weight: 100;
+    text-decoration: none;
+    animation: neontext 0.7s ease-in-out infinite alternate;
+  }
+
+  .neonText :hover {
+    //color: #eedde5e0;
+    //animation: neon 0.7s ease-in-out infinite alternate;
+  }
+  
+  .neonText h1 :hover {
+    animation: neontext 0.7s ease-in-out infinite alternate;
+    color: #fbadd1;
+  }
+
+  @keyframes neon {
+    from{
+      //filter: blur(.75px);
+      box-shadow: 
+        0px 0px 0px 2px rgba(255,255,255,.7),
+        0px 0px 5px 5px $border-glow,
+        0px 0px 5px 3px $border-glow inset,
+        0px 0px 60px transparentize($border-glow, .5),
+        0px 0px 20px transparentize($border-glow, .5) inset;
+    }
+
+    to {
+      //filter: blur(.75px);
+      box-shadow:
+        0px 0px 0px 2px rgba(255,255,255,.7),
+        0px 0px 10px 5px $border-glow,
+        0px 0px 5px 3px $border-glow inset,
+        0px 0px 80px transparentize($border-glow, .5),
+        0px 0px 30px transparentize($border-glow, .5) inset;
+    }
+  }
+
+  @keyframes neontext {
+    from {
+        text-shadow: 
+          0 0 1px #fff,
+          0 0 2px #fff,
+          0 0 3px #fff,
+          0 0 4px $glowcolor,
+          0 0 7px $glowcolor,
+          0 0 8px $glowcolor,
+          0 0 10px $glowcolor,
+          0 0 15px $glowcolor;
+    }
+    to {
+      text-shadow:
+        0 0 0.5px #fff,
+        0 0 1px #fff,
+        0 0 1.5px #fff,
+        0 0 2px $glowcolor,
+        0 0 3.5px $glowcolor,
+        0 0 4px $glowcolor,
+        0 0 5px $glowcolor,
+        0 0 7.5px $glowcolor;
+    }
+  }
+
+  */
+
+
+  .neonText {
+    margin: 15px 0 0 15px;
+    position: absolute;
+    z-index: 9999;
+    //transition: all 2s ease;
+    transition: opacity 0.5s;
+  }
+
+  .neonText h1{
+    transition: opacity 0.5s;
+    opacity: 0.5;
+    padding: 5px 10px 5px 10px;
+    filter: blur(0px);
+    color: rgb(255, 255, 255);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+    font-weight: 100;
+    text-decoration: none;
+    border-radius: 5px;
+    border-width: thin;
+    box-shadow: 
+        0px 0px 0px 2px rgba(255,255,255,.7);
+    //animation: neon 0.7s ease-in-out infinite alternate;
+    box-shadow: 
+    0px 0px 0px 2px rgba(255,255,255,.7),
+    0px 0px 5px 5px $border-glow,
+    0px 0px 5px 3px $border-glow inset,
+    0px 0px 60px transparentize($border-glow, .5),
+    0px 0px 20px transparentize($border-glow, .5) inset;
+
+text-shadow: 
+    
+    0 0 4px $glowcolor,
+    0 0 7px $glowcolor,
+    0 0 8px $glowcolor,
+    0 0 10px $glowcolor,
+    
+  }
+
+
+
+ .neonText.Btn-on h1{
+    opacity: 1;
+    //animation: neon 0.7s ease-in-out infinite alternate;
+    color: #ffffff;
+}
+
+
+/*
+
+  @keyframes neon {
+    from{
+      opacity: 1;
+      //filter: blur(.75px);
+      box-shadow: 
+        0px 0px 0px 2px rgba(255,255,255,.7),
+        0px 0px 20px 7px $border-glow,
+        0px 0px 10px 5px $border-glow inset,
+        0px 0px 60px transparentize($border-glow, .5),
+        0px 0px 20px transparentize($border-glow, .5) inset;
+
+    text-shadow: 
+        
+        //0 0 1px #fff,
+        //0 0 2px #fff,
+        //0 0 3px #fff,
+        0 0 4px $glowcolor,
+        0 0 7px $glowcolor,
+        0 0 8px $glowcolor,
+        0 0 10px $glowcolor,
+        
+    }
+
+    to {
+      opacity: 1;
+      //filter: blur(.75px);
+      box-shadow:
+        0 0 px 2px rgba(255,255,255,.7),
+        0 0 10px 5px $border-glow,
+        0 0 5px 3px $border-glow inset,
+        0 0 80px transparentize($border-glow, .5),
+        0 0 30px transparentize($border-glow, .5) inset;
+
+      text-shadow:
+      
+        //0 0 0.5px #fff,
+        //0 0 1px #fff,
+        //0 0 1.5px #fff,
+        0 0 2px $glowcolor,
+        0 0 3.5px $glowcolor,
+        0 0 4px $glowcolor,
+        0 0 5px $glowcolor,
+        0 0 30px $glowcolor,
+        0 0 20px $glowcolor,
+        0 0 10px $glowcolor;
+
+    }
+  }
+
+  */

@@ -1,0 +1,501 @@
+/*
+
+  .neonText {
+    margin: 15px 0 0 15px;
+    position: absolute;
+    z-index: 9999;
+    border-radius: 10px;
+    border-width: thin;
+    //filter: blur(.75px);
+    box-shadow: 
+        0px 0px 0px 2px rgba(255,255,255,.7);
+    animation: neon 0.7s ease-in-out infinite alternate;
+  }
+  
+  .neonText h1{
+    margin: 5px 10px 5px 10px;
+    filter: blur(0px);
+    color: rgb(255, 255, 255);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+    font-weight: 100;
+    text-decoration: none;
+    animation: neontext 0.7s ease-in-out infinite alternate;
+  }
+
+  .neonText :hover {
+    //color: #eedde5e0;
+    //animation: neon 0.7s ease-in-out infinite alternate;
+  }
+  
+  .neonText h1 :hover {
+    animation: neontext 0.7s ease-in-out infinite alternate;
+    color: #fbadd1;
+  }
+
+  @keyframes neon {
+    from{
+      //filter: blur(.75px);
+      box-shadow: 
+        0px 0px 0px 2px rgba(255,255,255,.7),
+        0px 0px 5px 5px $border-glow,
+        0px 0px 5px 3px $border-glow inset,
+        0px 0px 60px transparentize($border-glow, .5),
+        0px 0px 20px transparentize($border-glow, .5) inset;
+    }
+
+    to {
+      //filter: blur(.75px);
+      box-shadow:
+        0px 0px 0px 2px rgba(255,255,255,.7),
+        0px 0px 10px 5px $border-glow,
+        0px 0px 5px 3px $border-glow inset,
+        0px 0px 80px transparentize($border-glow, .5),
+        0px 0px 30px transparentize($border-glow, .5) inset;
+    }
+  }
+
+  @keyframes neontext {
+    from {
+        text-shadow: 
+          0 0 1px #fff,
+          0 0 2px #fff,
+          0 0 3px #fff,
+          0 0 4px $glowcolor,
+          0 0 7px $glowcolor,
+          0 0 8px $glowcolor,
+          0 0 10px $glowcolor,
+          0 0 15px $glowcolor;
+    }
+    to {
+      text-shadow:
+        0 0 0.5px #fff,
+        0 0 1px #fff,
+        0 0 1.5px #fff,
+        0 0 2px $glowcolor,
+        0 0 3.5px $glowcolor,
+        0 0 4px $glowcolor,
+        0 0 5px $glowcolor,
+        0 0 7.5px $glowcolor;
+    }
+  }
+
+  */
+.neonText {
+  margin: 15px 0 0 15px;
+  position: absolute;
+  z-index: 9999;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.neonText h1 {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0.5;
+  padding: 5px 10px 5px 10px;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5em;
+  font-weight: 100;
+  text-decoration: none;
+  border-radius: 5px;
+  border-width: thin;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.7);
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.7), 0px 0px 5px 5px rgba(255, 0, 0, 0.841), 0px 0px 5px 3px rgba(255, 0, 0, 0.841) inset, 0px 0px 60px rgba(255, 0, 0, 0.341), 0px 0px 20px rgba(255, 0, 0, 0.341) inset;
+          box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.7), 0px 0px 5px 5px rgba(255, 0, 0, 0.841), 0px 0px 5px 3px rgba(255, 0, 0, 0.841) inset, 0px 0px 60px rgba(255, 0, 0, 0.341), 0px 0px 20px rgba(255, 0, 0, 0.341) inset;
+  text-shadow: 0 0 4px red, 0 0 7px red, 0 0 8px red, 0 0 10px red;
+}
+
+.neonText.Btn-on h1 {
+  opacity: 1;
+  color: #ffffff;
+}
+
+/*
+
+  @keyframes neon {
+    from{
+      opacity: 1;
+      //filter: blur(.75px);
+      box-shadow: 
+        0px 0px 0px 2px rgba(255,255,255,.7),
+        0px 0px 20px 7px $border-glow,
+        0px 0px 10px 5px $border-glow inset,
+        0px 0px 60px transparentize($border-glow, .5),
+        0px 0px 20px transparentize($border-glow, .5) inset;
+
+    text-shadow: 
+        
+        //0 0 1px #fff,
+        //0 0 2px #fff,
+        //0 0 3px #fff,
+        0 0 4px $glowcolor,
+        0 0 7px $glowcolor,
+        0 0 8px $glowcolor,
+        0 0 10px $glowcolor,
+        
+    }
+
+    to {
+      opacity: 1;
+      //filter: blur(.75px);
+      box-shadow:
+        0 0 px 2px rgba(255,255,255,.7),
+        0 0 10px 5px $border-glow,
+        0 0 5px 3px $border-glow inset,
+        0 0 80px transparentize($border-glow, .5),
+        0 0 30px transparentize($border-glow, .5) inset;
+
+      text-shadow:
+      
+        //0 0 0.5px #fff,
+        //0 0 1px #fff,
+        //0 0 1.5px #fff,
+        0 0 2px $glowcolor,
+        0 0 3.5px $glowcolor,
+        0 0 4px $glowcolor,
+        0 0 5px $glowcolor,
+        0 0 30px $glowcolor,
+        0 0 20px $glowcolor,
+        0 0 10px $glowcolor;
+
+    }
+  }
+
+  */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  margin-top: -5px;
+}
+
+.line-anim {
+  z-index: -1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  padding: 0;
+  margin: 0 0 0 0;
+  overflow: hidden;
+}
+
+.lighth {
+  position: relative;
+  background-color: rgba(95, 25, 25, 0);
+  height: 300px;
+  width: 100%;
+  -webkit-perspective: 100px;
+          perspective: 100px;
+  overflow: hidden;
+}
+
+.lighth::before {
+  content: '';
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(transparent), to(#040404));
+  background: linear-gradient(0, transparent, #040404);
+  top: 0;
+  right: -100%;
+  left: -100%;
+  height: 20px;
+  z-index: 99;
+}
+
+.lightv {
+  position: relative;
+  color: #28c9d1;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: rotateX(25deg);
+          transform: rotateX(25deg);
+  opacity: 0.7;
+}
+
+.lightv::before {
+  content: '';
+  position: absolute;
+  background-color: currentColor;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -100%;
+  bottom: -100%;
+  left: 50%;
+  width: 4px;
+  -webkit-box-shadow: -140px 0 0 currentColor, -290px 0 0 currentColor, -440px 0 0 currentColor, -590px 0 0 currentColor, -740px 0 0 currentColor, -890px 0 0 currentColor, -1040px 0 0 currentColor, -1190px 0 0 currentColor, 140px 0 0 currentColor, 290px 0 0 currentColor, 440px 0 0 currentColor, 590px 0 0 currentColor, 740px 0 0 currentColor, 890px 0 0 currentColor, 1040px 0 0 currentColor, 1190px 0 0 currentColor, 1340px 0 0 currentColor, -1340px 0 0 currentColor, 1490px 0 0 currentColor, -1490px 0 0 currentColor;
+          box-shadow: -140px 0 0 currentColor, -290px 0 0 currentColor, -440px 0 0 currentColor, -590px 0 0 currentColor, -740px 0 0 currentColor, -890px 0 0 currentColor, -1040px 0 0 currentColor, -1190px 0 0 currentColor, 140px 0 0 currentColor, 290px 0 0 currentColor, 440px 0 0 currentColor, 590px 0 0 currentColor, 740px 0 0 currentColor, 890px 0 0 currentColor, 1040px 0 0 currentColor, 1190px 0 0 currentColor, 1340px 0 0 currentColor, -1340px 0 0 currentColor, 1490px 0 0 currentColor, -1490px 0 0 currentColor;
+}
+
+.lightv::after {
+  content: '';
+  position: absolute;
+  background-color: currentColor;
+  top: 0;
+  right: -1000vh;
+  left: -1000vh;
+  height: 4px;
+  -webkit-box-shadow: 0 95px currentColor, 0 190px currentColor, 0 290px currentColor, 0 -95px currentColor, 0 -190px currentColor, 0 -290px currentColor;
+          box-shadow: 0 95px currentColor, 0 190px currentColor, 0 290px currentColor, 0 -95px currentColor, 0 -190px currentColor, 0 -290px currentColor;
+  -webkit-animation: lightv 2s linear infinite;
+          animation: lightv 2s linear infinite;
+}
+
+@-webkit-keyframes lightv {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(95px);
+            transform: translateY(95px);
+  }
+}
+
+@keyframes lightv {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(95px);
+            transform: translateY(95px);
+  }
+}
+
+.title {
+  position: absolute;
+}
+
+.title h1 {
+  color: white;
+}
+
+:root {
+  --sky-top: #206;
+  --sky-bottom: #609;
+  --sun-size: 400px;
+  --sun-top: #f0c;
+  --sun-bottom: #80f;
+  --sun-highlight: #f00;
+  --sun-glow: #9006;
+}
+
+/*
+body {
+  background-image: linear-gradient(to bottom, var(--sky-top), var(--sky-bottom));
+  text-align: center;
+  box-sizing: border-box;
+}
+*/
+.sun__container {
+  position: absolute;
+  /* Container Size */
+  display: inline-block;
+  --size: var(--sun-size);
+  width: var(--size);
+  height: var(--size);
+  /* Container Effects */
+  -webkit-filter: drop-shadow(0px 8px 16px var(--sun-glow)) drop-shadow(0px 8px 16px #90f);
+          filter: drop-shadow(0px 8px 16px var(--sun-glow)) drop-shadow(0px 8px 16px #90f);
+  will-change: opacity;
+  /* Container Position */
+  padding: 32px;
+}
+
+.sun,
+.sun:after {
+  /* Shape */
+  border-radius: 100%;
+  overflow: hidden;
+  --size: 200px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* Colors */
+  background-color: var(--sun-top);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--sun-bottom)));
+  background-image: linear-gradient(to bottom, transparent, var(--sun-bottom));
+  /* Lines */
+  --line1-start: 2%;
+  --line1-end: 5;
+  --line2-start: 10%;
+  --line2-end: 5;
+  --line3-start: 19%;
+  --line3-end: 4;
+  --line4-start: 27%;
+  --line4-end: 4;
+  --line5-start: 35%;
+  --line5-end: 3;
+  --line6-start: 42%;
+  --line6-end: 2;
+  --line7-start: 48%;
+  --line7-end: 2;
+  --line8-start: 54%;
+  --line8-end: 1;
+  --line9-start: 59%;
+  --line9-end: 0.5;
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(#000), color-stop(#000), color-stop(transparent), color-stop(transparent), color-stop(#000), color-stop(#000), color-stop(transparent), color-stop(transparent), color-stop(#000), color-stop(#000), color-stop(transparent), color-stop(transparent), color-stop(#000), color-stop(#000), color-stop(transparent), color-stop(transparent), color-stop(#000), color-stop(#000), color-stop(transparent), color-stop(transparent), color-stop(#000), color-stop(#000), color-stop(transparent), color-stop(transparent), color-stop(#000), color-stop(#000), color-stop(transparent), color-stop(transparent), color-stop(#000), color-stop(#000), color-stop(transparent), color-stop(transparent), color-stop(#000), color-stop(#000), color-stop(transparent), color-stop(transparent), color-stop(#000), to(#000));
+  -webkit-mask-image: linear-gradient(to top, #000 0%, #000 var(--line1-start), transparent var(--line1-start), transparent calc(var(--line1-start) + (var(--line1-end) * 1%)), #000 calc(var(--line1-start) + (var(--line1-end) * 1%)), #000 var(--line2-start), transparent var(--line2-start), transparent calc(var(--line2-start) + (var(--line2-end) * 1%)), #000 calc(var(--line2-start) + (var(--line2-end) * 1%)), #000 var(--line3-start), transparent var(--line3-start), transparent calc(var(--line3-start) + (var(--line3-end) * 1%)), #000 calc(var(--line3-start) + (var(--line3-end) * 1%)), #000 var(--line4-start), transparent var(--line4-start), transparent calc(var(--line4-start) + (var(--line4-end) * 1%)), #000 calc(var(--line4-start) + (var(--line4-end) * 1%)), #000 var(--line5-start), transparent var(--line5-start), transparent calc(var(--line5-start) + (var(--line5-end) * 1%)), #000 calc(var(--line5-start) + (var(--line5-end) * 1%)), #000 var(--line6-start), transparent var(--line6-start), transparent calc(var(--line6-start) + (var(--line6-end) * 1%)), #000 calc(var(--line6-start) + (var(--line6-end) * 1%)), #000 var(--line7-start), transparent var(--line7-start), transparent calc(var(--line7-start) + (var(--line7-end) * 1%)), #000 calc(var(--line7-start) + (var(--line7-end) * 1%)), #000 var(--line8-start), transparent var(--line8-start), transparent calc(var(--line8-start) + (var(--line8-end) * 1%)), #000 calc(var(--line8-start) + (var(--line8-end) * 1%)), #000 var(--line9-start), transparent var(--line9-start), transparent calc(var(--line9-start) + (var(--line9-end) * 1%)), #000 calc(var(--line9-start) + (var(--line9-end) * 1%)), #000 100%);
+}
+
+.sun:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-filter: blur(48px);
+          filter: blur(48px);
+  background-color: var(--sun-highlight);
+}
+
+.logo-container {
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  margin: 15px 0 0 0;
+}
+
+.logo-top {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  margin: 15px 0 0 0;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  opacity: 0.7;
+}
+
+.logo-bot {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  margin: 15px 0 0 0;
+  -webkit-filter: drop-shadow(0px 1px 2px rgba(149, 192, 255, 0.712));
+          filter: drop-shadow(0px 1px 2px rgba(149, 192, 255, 0.712));
+}
+
+h1 {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(#0d0040), color-stop(#250033), to(#0c0131));
+  background: linear-gradient(#000000, #0d0040, #250033, #0c0131);
+  /*@include flexCenter();*/
+}
+
+body p {
+  font-family: "Nunito", sans-serif;
+  color: white;
+}
+
+.wrapper {
+  display: block;
+}
+
+header p {
+  font-size: 10px;
+}
+
+header button:hover {
+  color: red;
+}
+
+.container img {
+  z-index: -10;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  margin: 60px 0 0 0;
+}
+
+.title h1 {
+  font-family: "Press Start 2P", cursive;
+  text-shadow: #8835d5;
+  text-shadow: #8835d5;
+  color: #a8f7df;
+  text-shadow: #8835d5;
+}
+
+.box-container {
+  z-index: 2;
+  position: absolute;
+  -webkit-filter: drop-shadow(0px 0px 9px #5bd6df);
+          filter: drop-shadow(0px 0px 9px #5bd6df);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 50px 30px 30px;
+}
+
+.box-container img {
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */

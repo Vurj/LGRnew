@@ -1,0 +1,110 @@
+*, *::after, *::before {
+    box-sizing: border-box
+  }
+
+  .grid-container {
+    display: grid;
+   margin-top: -5px;
+  }
+
+  .line-anim {
+    z-index: -1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    padding: 0;
+    margin: 0 0 0 0;
+    overflow: hidden
+  }
+  
+  .lighth {
+    position: relative;
+    background-color: rgba(95, 25, 25, 0);
+    height: 300px;
+    width: 100%;
+    perspective: 100px;
+    overflow: hidden
+  }
+  .lighth::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(0, transparent, rgb(4, 4, 4)); 
+    top: 0;
+    right: -100%;
+    left: -100%;
+    height: 20px;
+    z-index: 99;
+  }
+  .lightv {
+    position: relative;
+    //grid color
+    color:#28c9d1;
+    height: 100%;
+    width: 100%;
+    transform: rotateX(25deg);
+    opacity: 0.7;
+  }
+  .lightv::before {
+    content: '';
+    position: absolute;
+    background-color: currentColor;
+    transform: translateX(-50%);
+    top: -100%;
+    bottom: -100%;
+    left: 50%;
+    width: 4px;
+    box-shadow:
+        -140px 0 0 currentColor,
+        -290px 0 0 currentColor,
+        -440px 0 0 currentColor,
+        -590px 0 0 currentColor,
+        -740px 0 0 currentColor,
+        -890px 0 0 currentColor,
+        -1040px 0 0 currentColor,
+        -1190px 0 0 currentColor,
+        140px 0 0 currentColor,
+        290px 0 0 currentColor,
+        440px 0 0 currentColor,
+        590px 0 0 currentColor, 
+        740px 0 0 currentColor,
+        890px 0 0 currentColor,
+        1040px 0 0 currentColor,
+        1190px 0 0 currentColor,
+        1340px 0 0 currentColor,
+        -1340px 0 0 currentColor,
+        1490px 0 0 currentColor,
+        -1490px 0 0 currentColor,
+  }
+  .lightv::after {
+    content: '';
+    position: absolute;
+    background-color: currentColor;
+    top: 0;
+    right: -1000vh;
+    left: -1000vh;
+    height: 4px;
+  
+    box-shadow:
+        0 95px currentColor,
+        0 190px currentColor,
+        0 290px currentColor,
+        0 -95px currentColor,
+        0 -190px currentColor,
+        0 -290px currentColor;
+        //0 -390px currentColor
+       // 0 -490px currentColor;
+    
+    animation: lightv 2s linear infinite;
+  }
+  @keyframes lightv {
+    from {
+      transform: translateY(0)
+    }
+    to {
+      transform: translateY(95px)
+    }
+  }
