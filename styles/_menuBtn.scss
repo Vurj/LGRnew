@@ -93,6 +93,7 @@
 
 
   .neonText {
+    cursor: pointer;
     margin: 15px 0 0 15px;
     position: absolute;
     z-index: 9999;
@@ -141,7 +142,7 @@ text-shadow:
 
 
 /*
-
+s
   @keyframes neon {
     from{
       opacity: 1;

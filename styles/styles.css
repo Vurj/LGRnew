@@ -82,6 +82,7 @@
 
   */
 .neonText {
+  cursor: pointer;
   margin: 15px 0 0 15px;
   position: absolute;
   z-index: 9999;
@@ -116,7 +117,7 @@
 }
 
 /*
-
+s
   @keyframes neon {
     from{
       opacity: 1;
@@ -173,6 +174,7 @@
 }
 
 .grid-container {
+  will-change: opacity;
   display: -ms-grid;
   display: grid;
   margin-top: -5px;
@@ -255,10 +257,8 @@
   right: -1000vh;
   left: -1000vh;
   height: 4px;
-  -webkit-box-shadow: 0 95px currentColor, 0 190px currentColor, 0 290px currentColor, 0 -95px currentColor, 0 -190px currentColor, 0 -290px currentColor;
-          box-shadow: 0 95px currentColor, 0 190px currentColor, 0 290px currentColor, 0 -95px currentColor, 0 -190px currentColor, 0 -290px currentColor;
-  -webkit-animation: lightv 2s linear infinite;
-          animation: lightv 2s linear infinite;
+  -webkit-box-shadow: 0 95px currentColor, 0 190px currentColor, 0 290px currentColor, 0 -95px currentColor, 0 -190px currentColor;
+          box-shadow: 0 95px currentColor, 0 190px currentColor, 0 290px currentColor, 0 -95px currentColor, 0 -190px currentColor;
 }
 
 @-webkit-keyframes lightv {
@@ -308,7 +308,26 @@ body {
   box-sizing: border-box;
 }
 */
+.sunbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .sun__container {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   position: absolute;
   /* Container Size */
   display: inline-block;
@@ -320,7 +339,6 @@ body {
           filter: drop-shadow(0px 8px 16px var(--sun-glow)) drop-shadow(0px 8px 16px #90f);
   will-change: opacity;
   /* Container Position */
-  padding: 32px;
 }
 
 .sun,
@@ -485,8 +503,6 @@ header button:hover {
 .box-container {
   z-index: 2;
   position: absolute;
-  -webkit-filter: drop-shadow(0px 0px 9px #5bd6df);
-          filter: drop-shadow(0px 0px 9px #5bd6df);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;

@@ -17,8 +17,17 @@ body {
   box-sizing: border-box;
 }
 */
+.sunbox{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 
 .sun__container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   position: absolute;
   /* Container Size */
   display: inline-block;
@@ -31,7 +40,6 @@ body {
   will-change: opacity;
   
   /* Container Position */
-  padding: 32px;
 }
 
 .sun,

@@ -3,6 +3,7 @@
   }
 
   .grid-container {
+    will-change: opacity;
     display: grid;
    margin-top: -5px;
   }
@@ -57,6 +58,7 @@
     bottom: -100%;
     left: 50%;
     width: 4px;
+    
     box-shadow:
         -140px 0 0 currentColor,
         -290px 0 0 currentColor,
@@ -78,6 +80,7 @@
         -1340px 0 0 currentColor,
         1490px 0 0 currentColor,
         -1490px 0 0 currentColor,
+        
   }
   .lightv::after {
     content: '';
@@ -88,17 +91,19 @@
     left: -1000vh;
     height: 4px;
   
+    
     box-shadow:
         0 95px currentColor,
         0 190px currentColor,
         0 290px currentColor,
         0 -95px currentColor,
         0 -190px currentColor,
-        0 -290px currentColor;
+        //0 -290px currentColor;
         //0 -390px currentColor
        // 0 -490px currentColor;
     
-    animation: lightv 2s linear infinite;
+    //animation: lightv 2s linear infinite;
+    //will-change: lightv;
   }
   @keyframes lightv {
     from {
